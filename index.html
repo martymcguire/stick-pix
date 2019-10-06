@@ -10,20 +10,33 @@
     <script src="./tracking/tracking-min.js"></script>
     <script src="./tracking/data/face-min.js"></script>
   </head>
-<body>  
+<body>
   <div class="container">
     <div class="header">
-      <h1>🌷🌼🌸 Filter Me 🌸🌼🌷</h1>
+      <h1>🌷🌼🌸 Stick Pix 🌸🌼🌷</h1>
+      <small>Based on <a href="https://dev.to/aspittel/facial-recognition-in-javascript-using-trackingjs-3l7">the filter me demo</a> by <a href="https://ali.spit.tel/">Ali Spittel</a></small>
     </div>
-    <div class="buttons">
-      <button id="flower-crown">flower crown 💐</button>
-      <button id="bunny-ears">bunny ears 🐰</button>       
-    </div>        
-    <div class="webcam">
-      <video id="video" width="500" height="375" preload autoplay loop muted></video>
-      <canvas id="canvas" width="500" height="375"></canvas>     
-    </div>  
+    <div id="liveControls">
+      <div class="buttons">
+        <button id="flower-crown">flower crown 💐</button>
+        <button id="bunny-ears">bunny ears 🐰</button>
+      </div>
+      <div class="saves">
+        <button onClick="saveImage();">snap it! 📷</a>
+      </div>
+      <div class="webcam">
+        <video id="video" width="500" height="375" preload autoplay loop muted></video>
+        <canvas id="canvas" width="500" height="375"></canvas>
+      </div>
+    </div>
+    <div id="saveControls">
+      <div class="saves">
+        <button onClick="tryAgain();">try again 🗑</button>
+      </div>
+      <img id="saveImage" />
+      <div>Save your snapshot by long-pressing, or right-clicking and choosing "Save Image As..."</div>
+    </div>
   </div>
-  <script src="script.js"></script>    
+  <script src="script.js"></script>
 </body>
 </html>

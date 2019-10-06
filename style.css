@@ -17,7 +17,7 @@ body {
 
 h1 {
     font-size: 70px;
-    margin: -10px;
+    margin: 0;
 }
 
 video {
@@ -45,6 +45,18 @@ button:active {
     grid-row-gap: 10px;
     grid-template-columns: 1fr;
     text-align: center;
+}
+
+#liveControls.hidden {
+	display: none;
+}
+
+#saveControls {
+	display: none;
+}
+
+#liveControls.hidden + #saveControls {
+	display: block;
 }
 
 @media (max-width: 800px) {
